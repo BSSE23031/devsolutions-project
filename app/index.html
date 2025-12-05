@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>DevSolutions Static Site</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <h1>DevSolutions Ltd. - Static Site</h1>
+  <p id="msg">Hello from the static site!</p>
+  <script>
+    // optional fetch to show multi-service: calls "api" service at /api/hello (in compose/k8s)
+    fetch('/api/hello').then(r=>r.json()).then(j=>document.getElementById('msg').innerText = j.msg).catch(()=>{})
+  </script>
+</body>
+</html>
